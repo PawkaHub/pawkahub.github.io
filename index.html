@@ -75,6 +75,17 @@
       <wn-select id="users-select"></wn-select>
     </section>
 
+    <!-- WT FEEDBACK
+      When it has enough room, it looks and acts as a table, but once things get tight (e.g. zoom in, and/or squish screen width),
+      then the column alignment across rows breaks down, even starts to wrap columns on some rows.
+    -->
+    <!-- PIETER RESPONSE
+      Correct. The exercise didn't call for tables so I didn't focus too hard on mobile support since I was mainly looking to illustrate the point that the select component can be used in different contexts, particularly in table cells in regards to padding as that was a point of discussion we had when we met up.
+
+      The table itself isn't even a table component. It's actually just called a "pretend-component" as you can see with the class name. It was purely for illustrative purposes only, was done near the end of the exercise time limit, and didn't seem to be that critical since it wasn't a requirement that was specified in the actual exercise itself but rather something I did because I had some extra time left.
+
+      If I was implementing an actual table component it'd have overflow scrolling implemented on it so that on screens that were smaller then the overall table width, you'd simply be able to scroll to the left / right accordingly. Or, depending on the use case, I'd have the columns expand to be full width with `flex: 1 0 100%` on smaller screens so that the table layout changed to be that of a more mobile focused table (you can see this convention done on other sites out there, depending on what type of table you're trying to display). In short, there's a variety of ways that tables could be handled on a variety of screen sizes, but since those weren't part of the exercise parameters I chose not to pursue those routes and just tossed a bit of flexbox at it.
+    -->
     <section class="card">
       <h1>Arbitrary Alternative Select In a Different UI Context Example</h1>
       <div class="pretend-component">
